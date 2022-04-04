@@ -1,0 +1,33 @@
+<html>
+<head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='user.css')}}">
+        <script src="{{ url_for('static', filename='user.js')}}"></script>
+        <script src="{{ url_for('static', filename='jquery-3.5.1.min.js')}}"></script>
+</head>
+
+<body onload="scanTable()">
+  <div style="color: red; font-size: 12px; width: 1633px; text-align: left;">
+    <a href="/release">Release Notes</a>
+  </div>
+  <div class="header">
+    <h1> Who are you? </h1>
+        <div id="usernames"></div>
+    <button onclick="window.location.href='scrum/Viewer'" ;="" class="button1 buttonred">Viewer</button>
+  </div>
+  <div class="header">
+        <h1> Who is not joining the party? </h1>
+    <div id="usernames_absent"></div>
+    <button onclick="updateAbsent('clear')" class="button1 buttonblue">Clear</button>
+  </div>
+  <div class="header">
+      <h1> Name Randomizer </h1>
+      <div id="random"></div>
+      <button onclick="shuffle()" class="button1 buttonblack">Randomizer</button>
+  </div>
+    <div class="header">
+      <h1> Sprint Name In Order </h1>
+      <div id="element"></div>
+      <button onclick="showelement()" class="button1 buttonblack">Show</button>
+  </div>
+</body>
+</html>

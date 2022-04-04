@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Sans-serif;
+  padding: 10px;
+  background: #f1f1f1;
+  margin: 0 auto;
+}
+
+li {
+    margin-bottom: 5px;
+    font-weight: none;
+    font-size: 16px;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: lightgrey;
+  margin-bottom: 10px;
+}
+
+.content {
+  max-width: 1070px;
+  margin: auto;
+   }
+
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn1 {   
+  float: left;
+  width: 132.6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.buttonround {
+  height: 49px;
+  width: 49px;
+  border-radius: 50%;
+  border: 1px solid red;
+  font-size: 20px;
+  margin: 0px 0px;
+  font-weight: bold;  
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 0px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 115px;
+}
+
+.button2 {
+  border: none;
+  color: white;
+  padding: 13px 29px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 30px;
+  cursor: pointer;
+  border-radius: 35px;
+  width: 315px;
+}
+
+.center {
+    text-align: center;
+}
+
+.buttonred {background-color: #FF6347; /* Tomato */}
+.buttongreen {background-color: lightgreen; /*#acdfa4;*/ /* Seagreen */}
+.buttonblack {background-color: darkgrey; /* Darkgrey */}
+.buttonblue {background-color: #5F9EA0; /* Cadetblue */}
+.buttonwhite {background-color: white; /* White */}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}

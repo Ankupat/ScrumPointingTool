@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='scrum.css')}}">
+        <script src="{{ url_for('static', filename='scrum.js')}}" defer></script>
+        <script src="{{ url_for('static', filename='jquery-3.5.1.min.js')}}"></script>
+</head>
+
+<body>
+<div class="header content">
+    <h1 id="userHeader"></h1><h2 id="userPoint"></h1>
+    <div id="content" style="margin-bottom: 10px"></div>
+</div>
+<div class="row content">
+      <div class="leftcolumn1 center">
+    <button class="button1 buttonred">Anil</button>
+    <button id="Anil-status" class="buttonround"></button>
+      </div>    
+      <div class="leftcolumn1 center">
+    <button class="button1 buttonred">Ankur</button>
+        <button id="Ankur-status" class="buttonround"></button>
+      </div>
+      <div class="leftcolumn1 center">
+            <button class="button1 buttonred">Bai</button>
+            <button id="Bai-status" class="buttonround"></button>
+      </div>
+      <div class="leftcolumn1 center">
+            <button class="button1 buttonred">Brandon</button>
+            <button id="Brandon-status" class="buttonround"></button>
+      </div>
+      <div class="leftcolumn1 center">
+            <button class="button1 buttonred">Devon</button>
+            <button id="Devon-status" class="buttonround"></button>
+      </div>
+      <div class="leftcolumn1 center">
+            <button class="button1 buttonred">Jesse</button>
+            <button id="Jesse-status" class="buttonround"></button>
+      </div>
+      <div class="leftcolumn1 center">
+            <button class="button1 buttonred">Omar</button>
+            <button id="Omar-status" class="buttonround"></button>
+      </div>
+      <div class="leftcolumn1 center">
+            <button class="button1 buttonred">Swati</button>
+            <button id="Swati-status" class="buttonround"></button>
+      </div>
+</div>
+<div class="row content center">
+   <button  id="clearResult" class="button2 buttonblue" onclick="clearVotes()">Clear Results</button>
+</div><br><br>
+<div class="row content">
+  <div style="float: left; width: 320px;" class="leftcolumn1 left">
+   <h3 style="margin-bottom: 0; margin-left: 20px">New Pointing Base</h3>
+    <ul>
+        <li>1 point     : less than 1 day</li>
+        <li>2 points    : 1 day</li>
+        <li>3 points    : day and a half</li>
+        <li>5 points    : 3 days</li>
+        <li>8 points    : Half a sprint</li>
+        <li>13 points   : More than half of a sprint</li>
+        <li>20 points   : 1 person, whole sprint</li>
+        <li>40 points   : 2 people, whole sprint</li>
+        <li>60 poitns   : 3 people, whole sprint</li>
+    </ul>
+  </div>
+  <div style="float: left; width: 230px;" class="leftcolumn1 left">
+   <h3 style="margin-bottom: 0; margin-left: 20px">Sprint Master Rotation</h3>
+   <ul>
+        <li>ammandra</li>
+        <li>ankupat</li>
+        <li>brwilb</li>
+        <li>huweih</li>
+        <li>jhhazen</li>
+        <li>lingbi</li>
+        <li>muraokad</li>
+        <li>swatpat</li>
+   </ul>
+  </div>
+  <div style="float: left; width: 210px;" class="leftcolumn1 left">
+   <h3 style="margin-bottom: 0; margin-left: 20px">On-call Rotation</h3>
+   <ul>
+        <li>bewlli</li>
+        <li>brwilb</li>
+        <li>lingbi</li>
+        <li>ankupat</li>
+        <li>jhhazen</li>
+        <li>ammandra</li>
+        <li>huweih</li>
+        <li>swatpat</li>
+        <li>muraokad</li>
+   </ul>
+  </div>
+  <div style="float: left; width: 280px;" class="leftcolumn1 left">
+     <h3 style="margin-bottom: 0; margin-left: 00px">Point Calculator</h3><br>
+       <input type="text" id="num1" name="num1" maxlength="2" size="3"/>
+       <button>Total Engineers</button><br><br>
+       <input type="text" id="num2" name="num2" maxlength="2" size="3"/>
+       <button>Engineer Days Lost</button><br><br>
+       <input type="text" id="num3" name="num3" maxlength="2" size="3"/>
+       <button>Public Holidays</button><br><br>
+       <input type="button" value="Calculate" onclick="calc()" />
+       <p id="result" name="r1">
+  </div>
+  <div style="float: left; width: 400px;" class="leftcolumn1 left">
+   <h2 id="current_sprint_name"></h2>
+   <h2 id="current_sprint_owner"></h2><br><br><br>
+   <h2 id="next_sprint_name"></h2>
+   <h2 id="next_sprint_owner"></h2>
+  </div>
+</div>
+</body>
+</html>
