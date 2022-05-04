@@ -2,33 +2,31 @@ Scrum Pointing Tool
 Steps to create new ec2 instance if existing is down
 create ec2 instace with IAM role so ec2 can access code commit
 
-Install Git
-
+#Install Git
 sudo yum install git -y
-Setup code commit auth
 
+#Setup code commit auth
 git config --global credential.helper '!aws codecommit credential-helper $@'
 git config --global credential.UseHttpPath true
-Install python 3
 
+#Install python 3
 sudo yum install python3 python3-pip -y
-Install dependency
 
+#Install dependency
 sudo pip3 install -r requirements.txt
-Initiate the DB
 
+#Initiate the DB
 sudo python3 db.py
-Start flask web server
 
+#Start flask web server
 cd ~ && sudo nohup python3 /home/ec2-user/dv-live-ScrumPointingTool/main.py &
-Setup cronjob to pull the code commit changes
 
+#Setup cronjob to pull the code commit changes
 0 * * /home/ec2-user/dv-live-ScrumPointingTool/git_pull.sh
 Note: sudo needs to be used since port 80 is privileged port, only works with sudo
 
-How to Delete the User test
-
+#How to Delete the User test
 curl http://scrum.amazonavoc.com/test -X DELETE -I
-How to Add the User test
 
+#How to Add the User test
 curl http://scrum.amazonavoc.com/posts -X POST -d '{name: "test", point: "2", absent: "no"}' -H "Content-Type: application/json"
